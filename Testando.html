@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testando JavaScript</title>
+	<meta charset="utf-8"/>
+	<Script>
+		var quebrada = false;
+		function Lampada(tipo) {
+			if(!quebrada){
+				document.getElementById("luz").src = "_imagens/" + tipo + ".jpg";
+				
+			}  
+			if(tipo == 'lampada-quebrada'){
+					quebrada = true;
+				}
+			
+		}
+		
+	</Script>
+
+</head>
+<body>
+	<h1>Java Script</h1>
+	<img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="Lampada('lampada-acesa')" onmouseout="Lampada('lampada-apagada')" onclick="Lampada('lampada-quebrada')"/>
+</body>
+</html>
+
